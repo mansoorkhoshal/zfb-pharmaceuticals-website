@@ -136,7 +136,7 @@ The website supports multiple pharmaceutical and healthcare categories:
 ## Contact Us
 
 <p align="center">
-  <img src="assets/screenshots/contactUs.png" alt="ZFB Pharmaceuticals Contact Us" width="900">
+  <img src="/assets/screenshots/contactUs.png" alt="ZFB Pharmaceuticals Contact Us" width="900">
 </p>
 
 ---
