@@ -1,0 +1,292 @@
+/* =========================================================
+   MAIN LEGAL PAGE
+========================================================= */
+
+.legal-page {
+  min-height: calc(100vh - 90px);
+
+  padding: 70px 8% 90px;
+
+  background: linear-gradient(135deg, #fbf8ff 0%, #f7f0ff 45%, #ffffff 100%);
+}
+
+/* =========================================================
+   CONTENT WIDTH
+========================================================= */
+
+.legal-page > * {
+  max-width: 1000px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.legal-page > h1,
+.legal-page > h2:first-child {
+  max-width: 1000px;
+
+  color: #6a0dad;
+
+  font-size: clamp(36px, 5vw, 52px);
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  margin-top: 0;
+
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   INTRODUCTION / FIRST PARAGRAPH
+========================================================= */
+
+.legal-page > p:first-of-type {
+  font-size: 18px;
+
+  line-height: 1.9;
+
+  color: #666;
+
+  margin-bottom: 45px;
+}
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.legal-page h3 {
+  max-width: 1000px;
+
+  color: #2e0854;
+
+  font-size: 23px;
+
+  font-weight: 700;
+
+  margin-top: 40px;
+
+  margin-bottom: 14px;
+
+  position: relative;
+
+  padding-left: 16px;
+}
+
+/* Purple line beside heading */
+
+.legal-page h3::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 3px;
+
+  width: 4px;
+
+  height: calc(100% - 6px);
+
+  background: #6a0dad;
+
+  border-radius: 10px;
+}
+
+/* =========================================================
+   PARAGRAPHS
+========================================================= */
+
+.legal-page p {
+  max-width: 1000px;
+
+  color: #5f5f5f;
+
+  font-size: 16px;
+
+  line-height: 1.9;
+
+  margin-top: 0;
+
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   LISTS
+========================================================= */
+
+.legal-page ul {
+  max-width: 1000px;
+
+  margin: 10px auto 30px;
+
+  padding: 20px 30px 20px 50px;
+
+  background: #ffffff;
+
+  border: 1px solid #eee3ff;
+
+  border-radius: 14px;
+
+  box-shadow: 0 8px 25px rgba(106, 13, 173, 0.05);
+}
+
+/* List items */
+
+.legal-page li {
+  color: #5f5f5f;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  margin-bottom: 10px;
+
+  padding-left: 5px;
+}
+
+/* Remove margin from final item */
+
+.legal-page li:last-child {
+  margin-bottom: 0;
+}
+
+/* Purple bullets */
+
+.legal-page li::marker {
+  color: #6a0dad;
+
+  font-size: 18px;
+}
+
+/* =========================================================
+   SEPARATOR BETWEEN SECTIONS
+========================================================= */
+
+.legal-page h3 {
+  border-top: 1px solid transparent;
+}
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.legal-page a {
+  color: #6a0dad;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.legal-page a:hover {
+  color: #9b51e0;
+}
+
+/* =========================================================
+   LEGAL CONTENT CARD EFFECT
+========================================================= */
+
+.legal-page h2:first-child,
+.legal-page h3:first-of-type {
+  margin-top: 0;
+}
+
+/* =========================================================
+   NICE TOP ACCENT
+========================================================= */
+
+.legal-page::before {
+  content: "LEGAL INFORMATION";
+
+  display: block;
+
+  width: fit-content;
+
+  margin: 30px auto 20px;
+
+  padding: 8px 18px;
+
+  background: #eedfff;
+
+  color: #6a0dad;
+
+  border-radius: 50px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .legal-page {
+    padding: 55px 5% 70px;
+  }
+
+  .legal-page > h1,
+  .legal-page > h2:first-child {
+    font-size: 36px;
+  }
+
+  .legal-page > p:first-of-type {
+    font-size: 16px;
+  }
+
+  .legal-page h3 {
+    font-size: 20px;
+
+    margin-top: 32px;
+  }
+
+  .legal-page p {
+    font-size: 15px;
+
+    line-height: 1.8;
+  }
+
+  .legal-page ul {
+    padding: 18px 20px 18px 40px;
+  }
+
+  .legal-page li {
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .legal-page {
+    padding-left: 18px;
+
+    padding-right: 18px;
+  }
+
+  .legal-page > h1,
+  .legal-page > h2:first-child {
+    font-size: 30px;
+  }
+
+  .legal-page h3 {
+    font-size: 19px;
+  }
+
+  .legal-page ul {
+    padding-left: 35px;
+  }
+}

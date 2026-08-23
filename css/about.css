@@ -1,0 +1,282 @@
+/*=========================================
+ABOUT HERO
+=========================================*/
+
+.about-hero {
+  margin-top: 90px;
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background:
+    linear-gradient(rgba(106, 13, 173, 0.85), rgba(142, 68, 173, 0.85)),
+    url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.about-hero h1 {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+/*=========================================
+ABOUT COMPANY
+=========================================*/
+
+.about-company {
+  padding: 90px 8%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.about-content h2 {
+  color: #6a0dad;
+  font-size: 42px;
+  margin-bottom: 25px;
+}
+
+.about-content p {
+  color: #666;
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+/*=========================================
+MISSION
+=========================================*/
+
+.mission {
+  padding: 80px 8%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  background: #f8f5ff;
+}
+
+.mission-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transition: 0.35s;
+}
+
+.mission-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 45px rgba(106, 13, 173, 0.18);
+}
+
+.mission-card i {
+  font-size: 55px;
+  color: #6a0dad;
+  margin-bottom: 20px;
+}
+
+.mission-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.mission-card p {
+  color: #666;
+  line-height: 1.8;
+}
+
+/*=========================================
+TIMELINE
+=========================================*/
+
+.timeline {
+  padding: 90px 8%;
+  background: #fff;
+}
+
+.timeline h2 {
+  text-align: center;
+  color: #6a0dad;
+  font-size: 42px;
+  margin-bottom: 60px;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 30px auto;
+  padding: 25px 30px;
+  max-width: 750px;
+  background: #f8f5ff;
+  border-left: 6px solid #6a0dad;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.timeline-item:hover {
+  transform: translateX(8px);
+}
+
+.timeline-item h3 {
+  color: #6a0dad;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.timeline-item p {
+  color: #666;
+  line-height: 1.8;
+}
+
+/*=========================================
+CERTIFICATIONS
+=========================================*/
+
+.services {
+  background: #f8f5ff;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.service {
+  background: #fff;
+  padding: 35px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transition: 0.35s;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+}
+
+.service i {
+  font-size: 55px;
+  color: #6a0dad;
+  margin-bottom: 20px;
+}
+
+.service h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.service p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/*=========================================
+ANIMATIONS
+=========================================*/
+
+.about-company,
+.mission-card,
+.timeline-item,
+.service {
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media (max-width: 992px) {
+  .about-company {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 42px;
+  }
+
+  .about-hero p {
+    font-size: 18px;
+  }
+
+  .about-content h2 {
+    font-size: 34px;
+  }
+
+  .timeline h2 {
+    font-size: 34px;
+  }
+
+  .timeline-item {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-company {
+    padding: 60px 5%;
+  }
+
+  .mission {
+    padding: 60px 5%;
+  }
+
+  .timeline {
+    padding: 60px 5%;
+  }
+
+  .about-hero {
+    padding: 40px 20px;
+  }
+
+  .about-hero h1 {
+    font-size: 34px;
+  }
+
+  .about-content h2 {
+    font-size: 28px;
+  }
+
+  .timeline h2 {
+    font-size: 28px;
+  }
+
+  .timeline-item h3 {
+    font-size: 22px;
+  }
+}
