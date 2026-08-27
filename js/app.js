@@ -91,16 +91,13 @@ if (navbar) {
       if (window.scrollY > 80) {
         navbar.style.background = "#ffffff";
         navbar.style.boxShadow = "0 8px 25px rgba(0,0,0,.12)";
-        navbar.style.padding = "15px 8%";
       } else {
         navbar.style.background = "rgba(255,255,255,.15)";
         navbar.style.boxShadow = "none";
-        navbar.style.padding = "18px 8%";
       }
     } else {
       navbar.style.background = "#ffffff";
       navbar.style.boxShadow = "0 8px 25px rgba(0,0,0,.08)";
-      navbar.style.padding = "15px 8%";
     }
   }
 
@@ -108,6 +105,56 @@ if (navbar) {
 
   updateNavbar();
 }
+
+// // ===============================
+// // NAVBAR SCROLL EFFECT
+// // ===============================
+
+// const navbar = document.querySelector(".navbar");
+
+// if (navbar) {
+//   const isHomePage =
+//     window.location.pathname.endsWith("index.html") ||
+//     window.location.pathname === "/" ||
+//     window.location.pathname.endsWith("/");
+
+//   // function updateNavbar() {
+//   //   if (isHomePage) {
+//   //     if (window.scrollY > 80) {
+//   //       navbar.style.background = "#ffffff";
+//   //       navbar.style.boxShadow = "0 8px 25px rgba(0,0,0,.12)";
+//   //       navbar.style.padding = "15px 8%";
+//   //     } else {
+//   //       navbar.style.background = "rgba(255,255,255,.15)";
+//   //       navbar.style.boxShadow = "none";
+//   //       navbar.style.padding = "18px 8%";
+//   //     }
+//   //   } else {
+//   //     navbar.style.background = "#ffffff";
+//   //     navbar.style.boxShadow = "0 8px 25px rgba(0,0,0,.08)";
+//   //     navbar.style.padding = "15px 8%";
+//   //   }
+//   // }
+
+//   function updateNavbar() {
+//     if (isHomePage) {
+//       if (window.scrollY > 80) {
+//         navbar.style.background = "#ffffff";
+//         navbar.style.boxShadow = "0 8px 25px rgba(0,0,0,.12)";
+//       } else {
+//         navbar.style.background = "rgba(255,255,255,.15)";
+//         navbar.style.boxShadow = "none";
+//       }
+//     } else {
+//       navbar.style.background = "#ffffff";
+//       navbar.style.boxShadow = "0 8px 25px rgba(0,0,0,.08)";
+//     }
+//   }
+
+//   window.addEventListener("scroll", updateNavbar);
+
+//   updateNavbar();
+// }
 
 // ===============================
 // SCROLL REVEAL
