@@ -6,7 +6,7 @@
 // BUSINESS DETAILS
 // =============================================
 
-const WHATSAPP_NUMBER = "923066465565";
+const WHATSAPP_NUMBER = "923003675565";
 
 const BUSINESS_EMAIL = "zfbpharmaceutical@gmail.com";
 
@@ -40,10 +40,14 @@ function getPrice(item) {
   // Convert values such as:
   // 25
   // "25"
+  // "Rs25"
+  // "Rs25.00"
   // "$25"
   // "$25.00"
 
-  const price = String(item.price ?? "").replace(/[$,\s]/g, "");
+  const price = String(item.price ?? "")
+    .replace(/[$Rs,]/gi, "")
+    .trim();
 
   const numericPrice = Number(price);
 
@@ -67,22 +71,24 @@ function loadOrder() {
 
   if (cart.length === 0) {
     checkoutItems.innerHTML = `
-            <div class="empty-checkout">
-                <i class="fa-solid fa-cart-shopping"></i>
+      <div class="empty-checkout">
 
-                <p>
-                    Your cart is empty.
-                </p>
+        <i class="fa-solid fa-cart-shopping"></i>
 
-                <a href="products.html">
-                    Continue Shopping
-                </a>
-            </div>
-        `;
+        <p>
+          Your cart is empty.
+        </p>
 
-    subtotalEl.textContent = "$0.00";
+        <a href="products.html">
+          Continue Shopping
+        </a>
 
-    totalEl.textContent = "$0.00";
+      </div>
+    `;
+
+    subtotalEl.textContent = "Rs 0.00";
+
+    totalEl.textContent = "Rs 0.00";
 
     return;
   }
@@ -106,31 +112,31 @@ function loadOrder() {
 
     checkoutItems.innerHTML += `
 
-            <div class="checkout-item">
+      <div class="checkout-item">
 
-                <div class="checkout-item-info">
+        <div class="checkout-item-info">
 
-                    <h4>
-                        ${item.name || "Product"}
-                    </h4>
+          <h4>
+            ${item.name || "Product"}
+          </h4>
 
-                    <p>
-                        Qty: ${quantity}
-                    </p>
+          <p>
+            Qty: ${quantity}
+          </p>
 
-                    <small>
-                        Price: $${price.toFixed(2)}
-                    </small>
+          <small>
+            Price: Rs ${price.toFixed(2)}
+          </small>
 
-                </div>
+        </div>
 
-                <strong>
-                    $${itemTotal.toFixed(2)}
-                </strong>
+        <strong>
+          Rs ${itemTotal.toFixed(2)}
+        </strong>
 
-            </div>
+      </div>
 
-        `;
+    `;
   });
 
   // -----------------------------------------
@@ -143,9 +149,9 @@ function loadOrder() {
   // DISPLAY TOTALS
   // -----------------------------------------
 
-  subtotalEl.textContent = "$" + subtotal.toFixed(2);
+  subtotalEl.textContent = "Rs " + subtotal.toFixed(2);
 
-  totalEl.textContent = "$" + total.toFixed(2);
+  totalEl.textContent = "Rs " + total.toFixed(2);
 }
 
 // Load checkout
@@ -224,10 +230,10 @@ Quantity:
 ${quantity}
 
 Unit Price:
-$${price.toFixed(2)}
+Rs ${price.toFixed(2)}
 
 Product Total:
-$${itemTotal.toFixed(2)}
+Rs ${itemTotal.toFixed(2)}
 
 -------------------------
 `;
@@ -243,10 +249,10 @@ $${itemTotal.toFixed(2)}
 *Order Summary*
 
 Subtotal:
-$${subtotal.toFixed(2)}
+Rs ${subtotal.toFixed(2)}
 
 Grand Total:
-$${total.toFixed(2)}
+Rs ${total.toFixed(2)}
 
 
 Thank you for choosing ZFB Pharmaceutical.
@@ -279,7 +285,9 @@ if (whatsappOrder) {
 
     const message = buildMessage(customer);
 
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    const url =
+      `https://wa.me/${WHATSAPP_NUMBER}` +
+      `?text=${encodeURIComponent(message)}`;
 
     window.open(url, "_blank");
   });

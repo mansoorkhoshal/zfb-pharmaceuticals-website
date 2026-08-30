@@ -54,8 +54,8 @@ function calculateTotals(cart) {
 
   const total = subtotal;
 
-  subtotalElement.textContent = "$" + subtotal.toFixed(2);
-  totalElement.textContent = "$" + total.toFixed(2);
+  subtotalElement.textContent = "Rs " + subtotal.toFixed(2);
+  totalElement.textContent = "Rs " + total.toFixed(2);
 }
 
 // ============================================
@@ -87,8 +87,8 @@ function showEmptyCart() {
 
     `;
 
-  subtotalElement.textContent = "$0.00";
-  totalElement.textContent = "$0.00";
+  subtotalElement.textContent = "Rs 0.00";
+  totalElement.textContent = "Rs 0.00";
 }
 
 // ============================================
@@ -123,7 +123,7 @@ function displayCart() {
 
                 <div class="item-price">
 
-                    $${item.price.toFixed(2)}
+                    Rs ${item.price.toFixed(2)}
 
                 </div>
 
